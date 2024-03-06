@@ -1,0 +1,36 @@
+.dropdown {
+  :deep > .el-input {
+    & .el-input__suffix {
+      display: flex;
+      border: none;
+      background: none;
+      color: #000000;
+    }
+
+    & .el-input__inner {
+      background: none;
+
+      &::placeholder {
+        color: #000000;
+      }
+    }
+
+    & .el-select__caret.el-icon-arrow-up::before {
+      font-size: 16px;
+    }
+
+    &.el-tag--small {
+      height: 20px;
+      padding: 0 8px;
+      line-height: 20px;
+
+      .el-icon-close {
+        height: 11px;
+        width: 11px;
+        line-height: 11px;
+        top: 0;
+        right: -2px;
+      }
+    }
+  }
+}

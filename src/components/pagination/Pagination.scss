@@ -1,0 +1,129 @@
+.pagination {
+  width: fit-content;
+  height: 34px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .input-wrapper {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    padding: 0 8px;
+
+    input {
+      width: 100%;
+      max-width: 45px;
+      background: #ffffff;
+      height: 26px;
+      border: 1px solid transparent;
+      box-shadow: 1px 1px 2px rgba(#1e1e1e, 0.3);
+      border-radius: 2px;
+      outline: none;
+      margin-right: 8px;
+      -moz-appearance: textfield;
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    input,
+    span {
+      font-size: 13px;
+      font-weight: 400;
+      color: #3b4654;
+      text-align: left;
+    }
+
+    &:not(.disabled) {
+      input {
+        &:hover {
+          border: 1px solid rgba(#89bad3, 0.5);
+        }
+
+        &:active,
+        &:focus {
+          border: 1px solid #89bad3;
+        }
+      }
+    }
+
+    &.disabled {
+      opacity: 0.55;
+    }
+  }
+
+  .decrease-buttons,
+  .increase-buttons {
+    display: flex;
+    align-items: center;
+
+    button {
+      border: none;
+      outline: none;
+      background-color: transparent;
+      cursor: pointer;
+      padding: 0;
+      width: 18px;
+      height: 18px;
+
+      &.go-first-button {
+        margin-right: 8px;
+      }
+
+      &.go-last-button {
+        margin-left: 8px;
+      }
+
+      i {
+        width: 18px;
+        height: 18px;
+        display: block;
+
+        &::before {
+          width: 18px;
+          height: 18px;
+          margin: 0;
+        }
+      }
+    }
+
+    &.disabled {
+      button {
+        cursor: not-allowed;
+        opacity: 0.55;
+      }
+    }
+  }
+
+  &.hide-prev-next-buttons {
+    .decrease-buttons,
+    .increase-buttons {
+      button {
+        &.go-first-button,
+        &.go-last-button {
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  &.hide-prev-next-buttons.hide-first-last-buttons {
+    .input-wrapper {
+      padding: 0;
+    }
+  }
+
+  &.hide-page-info {
+    .decrease-buttons {
+      margin-right: 8px;
+    }
+
+    .hide-prev-next-buttons.hide-first-last-buttons {
+      display: none;
+    }
+  }
+}

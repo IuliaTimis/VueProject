@@ -1,0 +1,41 @@
+.dropdown-popper {
+  .search-container {
+    top: 0;
+    position: sticky;
+    margin-top: -3px;
+    z-index: 1;
+
+    .action-placeholder {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 26px;
+      line-height: 26px;
+      width: 26px;
+      content: "";
+      cursor: pointer;
+    }
+
+    .search-field {
+      box-shadow: none;
+
+      .el-input__suffix {
+        border: none;
+        background: none;
+      }
+
+      > input {
+        border-bottom: 1px solid #000000;
+        height: 26px;
+        line-height: 26px;
+        font-size: 13px;
+        &:hover {
+          border-bottom: 1px solid rgba($color: #000000, $alpha: 0.5);
+        }
+        &:focus {
+          border-bottom: 1px solid #000000;
+        }
+      }
+    }
+  }
+}
